@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Professor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <header class="flex justify-between items-center px-8 py-4 bg-white shadow mb-10">
+    <div class="flex items-center space-x-4">
+      <a href="index.html">
+        <h1 class="text-2xl font-bold text-blue-700">Reeduc</h1>
+      </a>
+    </div>
+    <nav class="hidden md:flex space-x-4">
+      <a href=""><button class="flex items-center px-4 py-2 text-blue-600 rounded-lg hover:bg-blue-50"><i data-lucide="calendar" class="w-5 h-5 mr-2"></i>Calendário</button></a>
+      <a href=""><button class="flex items-center px-4 py-2 text-blue-600 rounded-lg hover:bg-blue-50"><i data-lucide="book-open" class="w-5 h-5 mr-2"></i>Professores</button></a>
+      <a href=""><button class="flex items-center px-4 py-2 text-blue-600 rounded-lg hover:bg-blue-50"><i data-lucide="graduation-cap" class="w-5 h-5 mr-2"></i>Pedagógico</button></a>
+      <a href=""><button class="flex items-center px-4 py-2 text-blue-600 rounded-lg hover:bg-blue-50"><i data-lucide="users" class="w-5 h-5 mr-2"></i>Alunos</button></a>
+    </nav>
+    <div class="hidden md:flex space-x-4">
+      <a href="index.html">
+        <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">Sair</button>
+      </a>
+    </div>
+    <button id="menu-btn" class="md:hidden flex items-center text-blue-600">
+      <i data-lucide="menu" class="w-7 h-7"></i>
+    </button>
+  </header>
+
+  <div id="mobile-menu" class="hidden flex-col space-y-2 px-8 pb-4 md:hidden">
+    <a href="" class="flex items-center px-4 py-2 text-blue-600 rounded-lg hover:bg-blue-50"><i data-lucide="calendar" class="w-5 h-5 mr-2"></i>Calendário</a>
+    <a href="" class="flex items-center px-4 py-2 text-blue-600 rounded-lg hover:bg-blue-50"><i data-lucide="book-open" class="w-5 h-5 mr-2"></i>Professores</a>
+    <a href="" class="flex items-center px-4 py-2 text-blue-600 rounded-lg hover:bg-blue-50"><i data-lucide="graduation-cap" class="w-5 h-5 mr-2"></i>Pedagógico</a>
+    <a href="" class="flex items-center px-4 py-2 text-blue-600 rounded-lg hover:bg-blue-50"><i data-lucide="users" class="w-5 h-5 mr-2"></i>Alunos</a>
+    <a href="index.html" class="flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">Sair</a>
+  </div>
+    <main class="flex-1 px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div class="bg-white p-6 rounded-2xl shadow flex items-center">
+        <i data-lucide="award" class="w-10 h-10 text-blue-600 mr-4"></i>
+        <div>
+          <p class="text-gray-500 text-sm">Média Geral</p>
+          <h2 class="text-2xl font-bold">7.8</h2>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow flex items-center">
+        <i data-lucide="users" class="w-10 h-10 text-green-600 mr-4"></i>
+        <div>
+          <p class="text-gray-500 text-sm">Alunos</p>
+          <h2 class="text-2xl font-bold">120</h2>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow flex items-center">
+        <i data-lucide="book" class="w-10 h-10 text-purple-600 mr-4"></i>
+        <div>
+          <p class="text-gray-500 text-sm">Matérias</p>
+          <h2 class="text-2xl font-bold">8</h2>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow mb-10">
+      <h3 class="text-lg font-bold mb-4">Notas Recentes</h3>
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="text-gray-500 text-sm border-b">
+            <th class="py-2">Aluno</th>
+            <th class="py-2">Matéria</th>
+            <th class="py-2">Nota</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b hover:bg-gray-50">
+            <td class="py-2">Maria Silva</td>
+            <td class="py-2">Matemática</td>
+            <td class="py-2 font-semibold text-green-600">9.2</td>
+          </tr>
+          <tr class="border-b hover:bg-gray-50">
+            <td class="py-2">João Pereira</td>
+            <td class="py-2">História</td>
+            <td class="py-2 font-semibold text-yellow-600">7.0</td>
+          </tr>
+          <tr class="border-b hover:bg-gray-50">
+            <td class="py-2">Ana Costa</td>
+            <td class="py-2">Português</td>
+            <td class="py-2 font-semibold text-red-600">5.5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="text-center py-6 border-t text-gray-500 text-sm">
+    © 2025 Reeduc - Todos os direitos reservados
+  </footer>
+  <script>
+    lucide.createIcons();
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
