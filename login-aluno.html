@@ -1,70 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Painel Aluno</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Painel Aluno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
-  <header class="flex justify-between items-center px-8 py-4 bg-white shadow mb-10">
-    <a href="index.html">
-      <h1 class="text-2xl font-bold text-blue-700">Reeduc</h1>
-    </a>
-    <nav class="hidden md:flex space-x-4">
-      <a href="cadastro.html"><button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Cadastro</button></a>
-      <a href="login-professor.html"><button class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Login Professor</button></a>
-      <a href="login-aluno.html"><button class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Login Aluno</button></a>
-    </nav>
-    <button id="menu-btn" class="md:hidden flex items-center text-blue-600">
-      <i data-lucide="menu" class="w-7 h-7"></i>
-    </button>
-  </header>
+    <header class="flex justify-between items-center px-8 py-4 bg-white shadow mb-10">
+        <a href="index.html">
+            <h1 class="text-2xl font-bold text-blue-700">Reeduc</h1>
+        </a>
+        <nav class="hidden md:flex space-x-4">
+            <a href="cadastro.html"><button
+                    class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Cadastro</button></a>
+            <a href="login-professor.html"><button
+                    class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Login
+                    Professor</button></a>
+            <a href="login-aluno.html"><button
+                    class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Login
+                    Aluno</button></a>
+        </nav>
+        <button id="menu-btn" class="md:hidden flex items-center text-blue-600">
+            <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+    </header>
 
-  <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-8 pb-4">
-    <a href="cadastro.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Cadastro</a>
-    <a href="login-professor.html" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Login Professor</a>
-    <a href="login-aluno.html" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Login Aluno</a>
-  </div>
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-8 pb-4">
+        <a href="cadastro.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Cadastro</a>
+        <a href="login-professor.html"
+            class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Login Professor</a>
+        <a href="login-aluno.html"
+            class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Login Aluno</a>
+    </div>
 
-  <main class="mb-10">
-    <form class="max-w-sm mx-auto" action="sistema-aluno.html" method="get">
-      <div class="mb-5">
-        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
-        <input type="email" id="email" placeholder="nome@email.com" 
-               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+    <main class="mb-10">
+        <form class="max-w-sm mx-auto" action="sistema-aluno.html" method="get">
+            <div class="mb-5">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
+                <input type="email" id="email" placeholder="nome@email.com" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
                       focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
-      </div>
-      <div class="mb-5">
-        <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Senha</label>
-        <input type="password" id="password" 
-               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+            </div>
+            <div class="mb-5">
+                <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Senha</label>
+                <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
                       focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
-      </div>
-      <div class="flex items-start mb-5">
-        <input id="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50" />
-        <label for="remember" class="ml-2 text-sm font-medium text-gray-900">Lembre de mim</label>
-      </div>
-      <button type="submit" 
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
+            </div>
+            <div class="flex items-start mb-5">
+                <input id="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50" />
+                <label for="remember" class="ml-2 text-sm font-medium text-gray-900">Lembre de mim</label>
+            </div>
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
                      focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-        Enviar
-      </button>
-    </form>
-  </main>
+                Enviar
+            </button>
+        </form>
+    </main>
 
-  <footer class="text-center py-6 border-t text-gray-500 text-sm">
-    © 2025 Reeduc - Todos os direitos reservados
-  </footer>
+    <footer class="text-center py-6 border-t text-gray-500 text-sm">
+        © 2025 Reeduc - Todos os direitos reservados
+    </footer>
 
-  <script>
-    lucide.createIcons()
-    const menuBtn = document.getElementById("menu-btn")
-    const mobileMenu = document.getElementById("mobile-menu")
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden")
-    })
-  </script>
+    <script>
+        lucide.createIcons()
+        const menuBtn = document.getElementById("menu-btn")
+        const mobileMenu = document.getElementById("mobile-menu")
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden")
+        })
+    </script>
 </body>
+
 </html>

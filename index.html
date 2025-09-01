@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reeduc</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
-<header class="flex justify-between items-center px-8 py-4 bg-white shadow mb-10 dark:bg-gray-800">
-  <a href="index.html" class="text-2xl font-bold text-blue-700 dark:text-blue-400">Reeduc</a>
-  <nav class="hidden md:flex space-x-4">
+  <header class="flex justify-between items-center px-8 py-4 bg-white shadow mb-10 dark:bg-gray-800">
+    <a href="index.html" class="text-2xl font-bold text-blue-700 dark:text-blue-400">Reeduc</a>
+    <nav class="hidden md:flex space-x-4">
+      <a href="cadastro.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Cadastro</a>
+      <a href="login-professor.html"
+        class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 dark:border-blue-400 dark:text-blue-400">Login
+        Professor</a>
+      <a href="login-aluno.html"
+        class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 dark:border-blue-400 dark:text-blue-400">Login
+        Aluno</a>
+    </nav>
+    <button id="menu-btn" class="md:hidden text-blue-700 dark:text-blue-400 text-2xl focus:outline-none">☰</button>
+  </header>
+
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-8 pb-4">
     <a href="cadastro.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Cadastro</a>
-    <a href="login-professor.html" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 dark:border-blue-400 dark:text-blue-400">Login Professor</a>
-    <a href="login-aluno.html" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 dark:border-blue-400 dark:text-blue-400">Login Aluno</a>
-  </nav>
-  <button id="menu-btn" class="md:hidden text-blue-700 dark:text-blue-400 text-2xl focus:outline-none">☰</button>
-</header>
+    <a href="login-professor.html"
+      class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-gray-700">Login
+      Professor</a>
+    <a href="login-aluno.html"
+      class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-gray-700">Login
+      Aluno</a>
+  </div>
 
-<div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-8 pb-4">
-  <a href="cadastro.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Cadastro</a>
-  <a href="login-professor.html" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-gray-700">Login Professor</a>
-  <a href="login-aluno.html" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-gray-700">Login Aluno</a>
-</div>
+  <main class="max-w-4xl mx-auto text-center py-20 px-6">
+    <h2 class="text-3xl font-extrabold mb-6 text-gray-900 dark:text-gray-100">Educação para transformação</h2>
+    <p class="text-lg leading-relaxed mb-8 text-gray-700 dark:text-gray-300">
+      Mais de <span class="font-bold text-blue-700 dark:text-blue-400">40 mil pessoas</span> no sistema penitenciário
+      usam o Reeduc
+      para aprender, se capacitar e conquistar novas oportunidades de vida.
+    </p>
+    <p class="text-gray-600 dark:text-gray-400">
+      O Reeduc oferece cursos, materiais de estudo e acompanhamento para apoiar a reintegração
+      social de pessoas privadas de liberdade no Brasil.
+    </p>
+  </main>
 
-<main class="max-w-4xl mx-auto text-center py-20 px-6">
-  <h2 class="text-3xl font-extrabold mb-6 text-gray-900 dark:text-gray-100">Educação para transformação</h2>
-  <p class="text-lg leading-relaxed mb-8 text-gray-700 dark:text-gray-300">
-    Mais de <span class="font-bold text-blue-700 dark:text-blue-400">40 mil pessoas</span> no sistema penitenciário usam o Reeduc
-    para aprender, se capacitar e conquistar novas oportunidades de vida.
-  </p>
-  <p class="text-gray-600 dark:text-gray-400">
-    O Reeduc oferece cursos, materiais de estudo e acompanhamento para apoiar a reintegração
-    social de pessoas privadas de liberdade no Brasil.
-  </p>
-</main>
+  <footer class="text-center py-6 border-t text-gray-500 text-sm dark:border-gray-700">
+    © 2025 Reeduc - Todos os direitos reservados
+  </footer>
 
-<footer class="text-center py-6 border-t text-gray-500 text-sm dark:border-gray-700">
-  © 2025 Reeduc - Todos os direitos reservados
-</footer>
-
-<script>
-  document.getElementById("menu-btn").addEventListener("click", () => {
-    document.getElementById("mobile-menu").classList.toggle("hidden")
-  });
-</script>
+  <script>
+    document.getElementById("menu-btn").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.toggle("hidden")
+    });
+  </script>
 
 </body>
+
 </html>
